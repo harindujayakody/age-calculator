@@ -67,7 +67,10 @@ while True:
         elif birthdate.day > datetime.today().day:
             days = (datetime.today().day + 30) - birthdate.day
 
-        print(f"Your age is {Fore.GREEN}{years} years, {Fore.BLUE}{months} months, {Fore.RED}and {Fore.YELLOW}{days} days.{Style.RESET_ALL}")
+        print(f"Your age is {Fore.GREEN}{years} years, {Fore.BLUE}{months} months, and {Fore.RED}{days} days.{Style.RESET_ALL}")
+        print(f"Months: {Fore.GREEN}{age * 12 + months} months")
+        print(f"Weeks: {Fore.YELLOW}{int((age * 365 + months * 30 + days) / 7)} weeks")
+        print(f"Days: {Fore.CYAN}{age * 365 + months * 30 + days} days")
 
     choice = display_guide()
 
